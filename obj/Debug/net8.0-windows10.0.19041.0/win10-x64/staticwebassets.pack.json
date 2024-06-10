@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ishea\\OneDrive\\Desktop\\RepoBlazor\\LoginBlazorApp\\obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\LoginBlazorApp.styles.css",
+      "PackagePath": "staticwebassets\\LoginBlazorApp.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\ishea\\OneDrive\\Desktop\\RepoBlazor\\LoginBlazorApp\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\ishea\\OneDrive\\Desktop\\RepoBlazor\\LoginBlazorApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ishea\\OneDrive\\Desktop\\RepoBlazor\\LoginBlazorApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\ishea\\OneDrive\\Desktop\\RepoBlazor\\LoginBlazorApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\ishea\\OneDrive\\Desktop\\RepoBlazor\\LoginBlazorApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.LoginBlazorApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.build.LoginBlazorApp.props",
+      "PackagePath": "build\\LoginBlazorApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildMultiTargeting.LoginBlazorApp.props",
+      "PackagePath": "buildMultiTargeting\\LoginBlazorApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildTransitive.LoginBlazorApp.props",
+      "PackagePath": "buildTransitive\\LoginBlazorApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

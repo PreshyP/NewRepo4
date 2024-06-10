@@ -1,0 +1,90 @@
+﻿@page "/registration"
+@using LoginBlazorApp.Services
+@using LoginBlazorApp.Models
+@inject IJSRuntime JS
+@inject IAppService AppServices
+<h3>Registration</h3>
+
+<div>
+    <div class="form-group">
+        <label>First Name</label>
+        <input class="form-control" @bind="registrationModel.FirstName" placeholder="Enter First Name">
+
+    </div>
+
+    <div class="form-group">
+        <label>Last Name</label>
+        <input class="form-control" @bind="registrationModel.LastName" placeholder="Enter Last Name">
+
+    </div>
+
+    <div class="mt-2 form-group">
+        <label>Gender</label>
+        <div class="d-flex flex-row">
+            <div class="d-flex gap-2">
+                <div class="form-check">
+                    <input class="form-check-input"  type="radio" name="gender" value="male" >
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Male
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" value="female">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Female
+                    </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="form-group">
+    <label>Email address</label>
+    <input type="email" class="form-control" @bind="registrationModel.Email" placeholder="Enter email">
+
+</div>
+<div class="mt-2 form-group">
+    <label>Password</label>
+    <input type="password" class="form-control" @bind="registrationModel.Password" placeholder="Password">
+
+</div>
+<div class="mt-2 text-end">
+    <NavLink class="nav-link" href="/">
+        <span>Already have  account?</span>
+    </NavLink>
+</div>
+
+
+<div class="text-center mt-2">
+    <button class="btn btn-primary" type="submit" @onclick="Submit">
+       <span class="@_spnnerClass" role="status" aria-hidden="true"></span>
+    Register</button>
+</div>
+
+@code {
+    RegistrationModel registrationModel = new();
+    private string _spnnerClass = "";
+
+    private async Task Submit()
+    {
+        _spnnerClass = "spinner-border spinner-border-sm";
+
+        var response = await AppServices.RegisterUser(registrationModel);
+        if (response.IsSuccess)
+        {
+            //await JS.InvokeVoidAsync("showAlert", "Success", "User Registered");
+            await App.Current.MainPage.DisplayAlert("Success", "Valid usernsme or password","OK");
+        }
+        else
+        {
+            await JS.InvokeVoidAsync("showAlert", "Oops", response.ErrorMessage,"OK");
+            //await App.Current.MainPage.DisplayAlert("Ooops", "invalid username or password");
+        }
+
+        _spnnerClass = "";
+        this.StateHasChanged();
+    }
+
+}
